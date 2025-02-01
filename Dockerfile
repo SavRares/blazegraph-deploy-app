@@ -1,4 +1,4 @@
-FROM lyrasis/blazegraph:latest
+FROM blazegraph/blazegraph:latest
 
 EXPOSE 9999
 
