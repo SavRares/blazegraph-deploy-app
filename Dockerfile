@@ -5,7 +5,7 @@ FROM openjdk:8-jdk-alpine
 WORKDIR /opt
 
 # Download Blazegraph release
-RUN wget https://github.com/blazegraph/database/releases/download/v2.1.5/blazegraph-2.1.5.war -O blazegraph.war
+RUN wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.war -O blazegraph.war
 
 # Expose Blazegraph default port
 EXPOSE 9999
