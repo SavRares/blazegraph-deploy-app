@@ -1,14 +1,14 @@
-# Use official OpenJDK image as a base
-FROM openjdk:8-jdk-alpine
+# Use Tomcat as the base image
+FROM tomcat:9.0-jdk11-openjdk
 
-# Set working directory
-WORKDIR /opt
+# Set the working directory
+WORKDIR /usr/local/tomcat/webapps
 
-# Download Blazegraph release
+# Download the Blazegraph WAR file
 RUN wget https://github.com/blazegraph/database/releases/download/BLAZEGRAPH_2_1_6_RC/blazegraph.war -O blazegraph.war
 
-# Expose Blazegraph default port
-EXPOSE 9999
+# Expose the Blazegraph port
+EXPOSE 8080
 
-# Run Blazegraph
-ENTRYPOINT ["java", "-jar", "blazegraph.war"]
+# Start Tomcat server (default start command for Tomcat)
+CMD ["catalina.sh", "run"]
