@@ -1,4 +1,4 @@
-FROM blazegraph/blazegraph:latest
+FROM islandora/blazegraph:latest
 
 EXPOSE 9999
 
